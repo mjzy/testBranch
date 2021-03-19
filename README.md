@@ -100,7 +100,7 @@ git branch -d test
 git branch -D test
 
 /* 删除远程分支 */
-git push origin --delete serverfix
+git push origin --delete test
 ```
 
 ## Git合并分支
@@ -115,9 +115,18 @@ git merge test
 git branch -d test
 
 /* 远程分支合并 */
+// 4. 代码提交
+git push origin master 
+// 4. 删除远程分支
+git push origin --delete test
 ```
 
+## Git 恢复分支
 
+```
+/* 删除分支没有回退操作，而是需要寻找被删除分支最后一次的提交记录,已该记录为基础创建一个新的分支，名称可与原来分支相同 */
+// 1. 使用命令查看提交记录
+```
 
 
 
