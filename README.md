@@ -78,10 +78,33 @@ git push origin new_branch_name: rename_new_branch_name
   git push origin test
   // 4. 查看分支
   git branch -a
-* master
+  * master
   test
   remotes/origin/master
   remotes/origin/test
   ```
-  
-  
+
+## Git 删除分支
+
+```bash
+/* 删除本地分支 */
+git branch -d test
+
+/* 删除远程分支 */
+git push origin --delete serverfix
+```
+
+## Git合并分支
+
+```bash
+/* 本地分支合并 */
+// 1. 确定以谁为主体进行合并，切换到对应分支
+git checkout master
+// 2. 将test分支合并到master分支
+git merge test
+// 3. 删除test本地分支
+git branch -d test
+
+/* 远程分支合并 */
+```
+
